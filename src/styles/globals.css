@@ -1,0 +1,294 @@
+/* font-family: 'Golos Text', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Golos Text", sans-serif;
+}
+
+:root {
+  --primary-color: #0f0f0f;
+  --white-color: #fff;
+}
+
+body :where(h1, h2, h3, h4, h5, h6, p) {
+  margin: 0;
+  padding: 0;
+}
+
+body a,
+body button {
+  text-decoration: none;
+  transition: all linear 0.1s;
+}
+
+body :where(ul, ol, li) {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.main__section {
+  margin-top: 120px;
+  margin-left: 260px;
+}
+
+.d_flex {
+  display: flex;
+  align-items: center;
+}
+
+.d_center {
+  justify-content: center;
+}
+
+.d_justify {
+  justify-content: space-between;
+}
+
+/* Common Tags Fost Size */
+
+h2 {
+  font-size: 35px;
+  line-height: 45px;
+  color: var(--text-color-secondary);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.custom__input input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 12px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.custom__input input:focus {
+  outline: none;
+}
+
+/* -----------------------------------------------------------
+Start menubar
+-----------------------------------------------------------*/
+
+.menubar {
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.12);
+  padding: 20px 0;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white-color);
+  box-sizing: border-box;
+}
+
+.menubar .MuiContainer-root {
+  max-width: 100%;
+}
+
+.menubar .bars {
+  cursor: pointer;
+}
+
+.menubar .bars svg {
+  width: 30px;
+  height: auto;
+}
+
+.menubar .logo svg {
+  width: 100px;
+  height: auto;
+}
+
+.menubar__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menubar__middle {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.menubar__middle input {
+  border-radius: 30px;
+}
+
+.menubar .search__bar {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: #f8f8f8;
+  width: 65px;
+  height: 40px;
+  border-radius: 0 30px 30px 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all linear 0.2s;
+  cursor: pointer;
+}
+
+.menubar .search__bar:hover {
+  background: #f0f0f0;
+}
+
+.menubar .menubar__right {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.menubar .notification {
+  position: relative;
+}
+
+.menubar .notification span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border: 1px solid #ddd;
+}
+
+.menubar .menubar__right img {
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* -----------------------------------------------------------
+End menubar
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start sidebar
+-----------------------------------------------------------*/
+.sidebar {
+  background: #fff;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
+  width: 180px;
+  height: calc(100vh - 80px);
+  position: fixed;
+  top: 80px;
+  padding: 20px;
+  z-index: 99;
+  transition: all linear 0.2s;
+}
+
+.short__sidebar {
+  width: 45px;
+  padding: 15px;
+}
+
+.side__menu ul {
+  margin-top: 10px;
+}
+
+.side__menu li {
+  margin-bottom: 10px;
+}
+
+.side__menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color);
+  font-weight: 300;
+  padding: 10px;
+}
+
+.side__menu a.active {
+  background: #e6e6e6;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.side__menu .short__menu a span {
+  display: none;
+}
+
+/* -----------------------------------------------------------
+End sidebar
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+Start 
+-----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+End 
+-----------------------------------------------------------*/
