@@ -18,7 +18,7 @@ const Menubar = ({show,setShow}) => {
         <Container>
           <Grid container spacing={2}>
             {/* left */}
-            <Grid item lg={3} xs={3}>
+            <Grid item lg={6} xs={6}>
               <div className="menubar__left">
                 <div onClick={handleClick} className="bars">
                   <Bars />
@@ -29,18 +29,8 @@ const Menubar = ({show,setShow}) => {
               </div>
             </Grid>
 
-            {/* middle */}
-            <Grid item lg={6} xs={6}>
-              <div className="menubar__middle">
-                <DBInput name="" placeholder="Search" />
-                <div className="search__bar">
-                  <SearchIcon />
-                </div>
-              </div>
-            </Grid>
-
             {/* right */}
-            <Grid item lg={3} xs={3}>
+            <Grid item lg={6} xs={6}>
               <div className="menubar__right">
                 <div className="notification">
                   <span>10</span>

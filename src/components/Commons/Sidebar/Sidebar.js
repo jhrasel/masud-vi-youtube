@@ -5,6 +5,7 @@ import { Data } from "./Data";
 import Link from "next/link";
 
 import { useRouter } from "next/router";
+import { Button } from "@mui/material";
 
 const Sidebar = ({ show }) => {
   const router = useRouter();
@@ -14,15 +15,32 @@ const Sidebar = ({ show }) => {
       {show ? (
         <div className="sidebar">
           <div className="side__menu">
+            <ul className="side__menu__first">
+              {Data?.map((data, i) => (
+                <li key={i}>
+                  <Button>
+                    <Link
+                      href={data.url}
+                      className={router.pathname == data.url ? "active" : ""}
+                    >
+                      <span>{data.icon}</span> {data.name}
+                    </Link>
+                  </Button>
+                </li>
+              ))}
+            </ul>
+
             <ul>
               {Data?.map((data, i) => (
                 <li key={i}>
-                  <Link
-                    href={data.url}
-                    className={router.pathname == data.url ? "active" : ""}
-                  >
-                    <span>{data.icon}</span> {data.name}
-                  </Link>
+                  <Button>
+                    <Link
+                      href={data.url}
+                      className={router.pathname == data.url ? "active" : ""}
+                    >
+                      <span>{data.icon}</span> {data.name}
+                    </Link>
+                  </Button>
                 </li>
               ))}
             </ul>
@@ -31,6 +49,19 @@ const Sidebar = ({ show }) => {
       ) : (
         <div className="sidebar short__sidebar">
           <div className="side__menu">
+            <ul className="short__menu side__menu__first">
+              {Data?.map((data, i) => (
+                <li key={i}>
+                  <Link
+                    href={data.url}
+                    className={router.pathname == data.url ? "active" : ""}
+                  >
+                    {data.icon} <span>{data.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
             <ul className="short__menu">
               {Data?.map((data, i) => (
                 <li key={i}>

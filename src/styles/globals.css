@@ -10,6 +10,12 @@
 :root {
   --primary-color: #0f0f0f;
   --white-color: #fff;
+  --red-color: #c00;
+  --bg-color: #f9f9f9;
+}
+
+body {
+  background: #f9f9f9;
 }
 
 body :where(h1, h2, h3, h4, h5, h6, p) {
@@ -30,8 +36,8 @@ body :where(ul, ol, li) {
 }
 
 .main__section {
-  margin-top: 120px;
-  margin-left: 260px;
+  margin-top: 100px;
+  margin-left: 230px;
 }
 
 .d_flex {
@@ -76,7 +82,7 @@ Start menubar
 .menubar {
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.12);
   padding: 20px 0;
-  z-index: 9;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
@@ -107,36 +113,6 @@ Start menubar
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.menubar__middle {
-  position: relative;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.menubar__middle input {
-  border-radius: 30px;
-}
-
-.menubar .search__bar {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  background: #f8f8f8;
-  width: 65px;
-  height: 40px;
-  border-radius: 0 30px 30px 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all linear 0.2s;
-  cursor: pointer;
-}
-
-.menubar .search__bar:hover {
-  background: #f0f0f0;
 }
 
 .menubar .menubar__right {
@@ -184,22 +160,27 @@ Start sidebar
 .sidebar {
   background: #fff;
   box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
-  width: 180px;
+  width: 200px;
   height: calc(100vh - 80px);
   position: fixed;
   top: 80px;
-  padding: 20px;
-  z-index: 99;
+  z-index: 9;
   transition: all linear 0.2s;
 }
 
+.sidebar button{
+  min-width: unset;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
 .short__sidebar {
-  width: 45px;
-  padding: 15px;
+  width: 60px;
 }
 
 .side__menu ul {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .side__menu li {
@@ -212,17 +193,51 @@ Start sidebar
   gap: 10px;
   color: var(--primary-color);
   font-weight: 300;
-  padding: 10px;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.side__menu a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--red-color);
+  opacity: 0;
 }
 
 .side__menu a.active {
-  background: #e6e6e6;
-  border-radius: 10px;
+  background: var(--bg-color);
   font-weight: 500;
+  color: var(--red-color);
+}
+
+.side__menu a.active::before {
+  opacity: 1;
+}
+
+.side__menu a.active path {
+  fill: var(--red-color);
 }
 
 .side__menu .short__menu a span {
   display: none;
+}
+
+.short__sidebar a {
+  padding: 10px;
+  padding-left: 12px;
+  justify-content: center;
+}
+
+.side__menu__first{
+  height: 75vh;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
 }
 
 /* -----------------------------------------------------------
