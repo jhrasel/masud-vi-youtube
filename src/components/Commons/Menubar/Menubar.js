@@ -4,12 +4,21 @@ import Bars from "@/svgs/Bars";
 import Logo from "@/svgs/Logo";
 import NotificationIcon from "@/svgs/NotificationIcon";
 import SearchIcon from "@/svgs/SearchIcon";
-import { Container, Grid } from "@mui/material";
+import { Button, Container, Grid, Menu, MenuItem } from "@mui/material";
 import React from "react";
 
-const Menubar = ({show,setShow}) => {
+const Menubar = ({ show, setShow }) => {
   const handleClick = () => {
     setShow(!show);
+  };
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClickMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -37,12 +46,34 @@ const Menubar = ({show,setShow}) => {
                   <NotificationIcon />
                 </div>
                 <div className="user">
-                  <DBImage
-                    image="/images/user.jpg"
-                    width="35"
-                    height="35"
-                    alt="user"
-                  />
+                  <Button
+                    id="basic-button"
+                    aria-controls={open ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? "true" : undefined}
+                    onClick={handleClickMenu}
+                  >
+                    <DBImage
+                      image="/images/user.jpg"
+                      width="35"
+                      height="35"
+                      alt="user"
+                    />
+                  </Button>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                    className="profile__dropdown"
+                  >
+                    <MenuItem onClick={handleClose}>Profile</MenuItem>
+                    <MenuItem onClick={handleClose}>My account</MenuItem>
+                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  </Menu>
                 </div>
               </div>
             </Grid>

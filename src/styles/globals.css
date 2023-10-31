@@ -150,6 +150,19 @@ Start menubar
   object-fit: cover;
 }
 
+.profile__dropdown ul{
+  margin: 0;
+  padding: 0;
+}
+
+.profile__dropdown li {
+  border-bottom: 1px solid #ddd;
+}
+
+.profile__dropdown li:last-child{
+  border-bottom: 0;
+}
+
 /* -----------------------------------------------------------
 End menubar
 -----------------------------------------------------------*/
@@ -168,7 +181,7 @@ Start sidebar
   transition: all linear 0.2s;
 }
 
-.sidebar button{
+.sidebar button {
   min-width: unset;
   padding: 0;
   margin: 0;
@@ -234,7 +247,7 @@ Start sidebar
   justify-content: center;
 }
 
-.side__menu__first{
+.side__menu__first {
   height: 75vh;
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
