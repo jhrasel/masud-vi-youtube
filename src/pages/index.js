@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import DBInput from "@/components/ReUse/DBInput";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <h2>Start Here</h2>
+      <DBInput label="Input Field" className="red" />
     </>
   );
 }

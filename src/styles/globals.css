@@ -1,14 +1,14 @@
-/* font-family: 'Golos Text', sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap");
+font-family: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Golos Text", sans-serif;
 }
 
 :root {
   --primary-color: #0f0f0f;
+  --text-color: #898989;
   --white-color: #fff;
   --red-color: #c00;
   --bg-color: #f9f9f9;
@@ -16,6 +16,7 @@
 
 body {
   background: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
 }
 
 body :where(h1, h2, h3, h4, h5, h6, p) {
@@ -63,16 +64,42 @@ h2 {
   text-transform: capitalize;
 }
 
-.custom__input input {
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+/* Common input */
+.custom__input .MuiInputBase-input {
   width: 100%;
   border-radius: 10px;
-  padding: 12px 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 50px;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   box-sizing: border-box;
 }
 
-.custom__input input:focus {
-  outline: none;
+.custom__input .MuiTextField-root {
+  width: 100%;
+}
+
+.custom__input .MuiOutlinedInput-notchedOutline {
+  border-radius: 10px;
+}
+
+.custom__input .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #26bf8c;
+}
+
+.custom__input.red .MuiOutlinedInput-notchedOutline {
+  border-color: var(--red-color);
+}
+
+.custom__input .MuiFormLabel-root {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 /* -----------------------------------------------------------
@@ -150,7 +177,7 @@ Start menubar
   object-fit: cover;
 }
 
-.profile__dropdown ul{
+.profile__dropdown ul {
   margin: 0;
   padding: 0;
 }
@@ -159,7 +186,7 @@ Start menubar
   border-bottom: 1px solid #ddd;
 }
 
-.profile__dropdown li:last-child{
+.profile__dropdown li:last-child {
   border-bottom: 0;
 }
 
@@ -258,11 +285,121 @@ End sidebar
 -----------------------------------------------------------*/
 
 /* -----------------------------------------------------------
-Start 
+Start login
 -----------------------------------------------------------*/
 
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.login__box {
+  width: 400px;
+  border-radius: 20px;
+  padding: 50px;
+  background: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+}
+
+.login__box h2 {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.login .login__form .custom__input {
+  margin-top: 25px;
+}
+
+.login .login__form .password {
+  position: relative;
+}
+
+.login .login__form .password span {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.login .login__form .remember__pass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login .login__form .remember__pass a {
+  color: #5c61f2;
+}
+
+.login .login__form button {
+  margin-top: 20px;
+  background: #5c61f2;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: var(--white-color);
+  width: 100%;
+}
+
+/* Sign__in__with */
+
+.Sign__in__with h6 {
+  position: relative;
+  margin: 20px 0;
+}
+
+.Sign__in__with h6 span {
+  background: var(--white-color);
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.Sign__in__with h6 .bdr {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+
+.Sign__in__with .social__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Sign__in__with .social__icon a {
+  color: #5c61f2;
+}
+
+.Sign__in__with .dont__acc {
+  margin-top: 20px;
+}
+
+.Sign__in__with .dont__acc a {
+  color: #5c61f2;
+}
+
 /* -----------------------------------------------------------
-End 
+End login
 -----------------------------------------------------------*/
 
 /* -----------------------------------------------------------
