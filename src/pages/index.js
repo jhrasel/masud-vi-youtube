@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import DBInput from "@/components/ReUse/DBInput";
+import CommonTable from "@/components/Commons/Table/CommonTable";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
 
       <h2>Start Here</h2>
       <DBInput label="Input Field" className="red" />
+
+      <CommonTable />
     </>
   );
 }
