@@ -1,5 +1,4 @@
 import DBInput from "@/components/ReUse/DBInput";
-import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,8 +8,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Button, Checkbox, FormControlLabel } from "@mui/material";
 import DBLink from "@/components/ReUse/DBLink";
 import Link from "next/link";
+import { useState } from "react";
 
 const index = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   let [showPass, setShowPass] = useState(false);
 
   const handleShow = () => {
@@ -76,7 +77,7 @@ const index = () => {
               </div>
               <div className="dont__acc">
                 <p>
-                  Don't have account? <Link href="">Create Account</Link>
+                  Dont have account? <Link href="">Create Account</Link>
                 </p>
               </div>
             </div>
