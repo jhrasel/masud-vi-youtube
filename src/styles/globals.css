@@ -126,6 +126,9 @@ p {
 .custom__input .MuiFormLabel-root {
   font-size: 14px;
   line-height: 20px;
+  z-index: 99;
+  background: #fff;
+  padding: 0px 5px;
 }
 
 /* -----------------------------------------------------------
@@ -230,6 +233,7 @@ Start sidebar
   height: calc(100vh - 80px);
   position: fixed;
   top: 80px;
+  left: 0;
   z-index: 9;
   transition: all linear 0.2s;
 }
@@ -243,6 +247,14 @@ Start sidebar
 
 .short__sidebar {
   width: 60px;
+}
+
+.side__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  box-sizing: border-box;
 }
 
 .side__menu ul {
@@ -301,7 +313,7 @@ Start sidebar
 }
 
 .side__menu__first {
-  height: 75vh;
+  height: 80%;
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
 }
@@ -548,6 +560,51 @@ Start common__table
   margin-top: 20px;
 }
 
+/* pagination__part */
+.pagination__part{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.pagination__part .rows__per__page{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination__part h6{
+  border: none;
+  padding: 0;
+}
+
+.pagination__part .rows__per__page select{
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.pagination__part .pagination__item{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination__part .pagination__item button{
+  padding: 5px 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.pagination__part .pagination__item button svg{
+  font-size: 20px;
+}
+
 .duel__button {
   display: flex;
   align-items: center;
@@ -564,6 +621,7 @@ Start common__table
   background: var(--red-color);
   border: 1px solid var(--red-color);
 }
+
 
 /* -----------------------------------------------------------
 End common__table

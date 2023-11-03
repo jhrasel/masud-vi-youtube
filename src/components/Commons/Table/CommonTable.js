@@ -22,6 +22,9 @@ import { useState } from "react";
 import DBInput from "@/components/ReUse/DBInput";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
 
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+
 const CommonTable = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -257,6 +260,28 @@ const CommonTable = () => {
             </TableBody>
           </Table>
         </TableContainer>
+
+        <div className="pagination__part">
+          <div className="rows__per__page">
+            <h6>Rows per page:</h6>
+            <select name="">
+              <option value="">10</option>
+              <option value="">20</option>
+              <option value="">30</option>
+            </select>
+          </div>
+
+          {/* pagination__item */}
+          <div className="pagination__item">
+            <h6>1 - 10 of 10</h6>
+            <button>
+              <SkipPreviousIcon /> Prev
+            </button>
+            <button>
+              Next <SkipNextIcon />
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );

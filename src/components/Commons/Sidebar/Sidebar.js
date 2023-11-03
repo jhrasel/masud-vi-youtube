@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { useRouter } from "next/router";
 import { Button } from "@mui/material";
+import Home from "@/svgs/Home";
 
 const Sidebar = ({ show }) => {
   const router = useRouter();
@@ -31,18 +32,27 @@ const Sidebar = ({ show }) => {
             </ul>
 
             <ul>
-              {Data?.map((data, i) => (
-                <li key={i}>
-                  <Button>
-                    <Link
-                      href={data.url}
-                      className={router.pathname == data.url ? "active" : ""}
-                    >
-                      <span>{data.icon}</span> {data.name}
-                    </Link>
-                  </Button>
-                </li>
-              ))}
+              <li>
+                <Button>
+                  <Link href="">
+                    <span>
+                      <Home />
+                    </span>
+                    Settings
+                  </Link>
+                </Button>
+              </li>
+
+              <li>
+                <Button>
+                  <Link href="">
+                    <span>
+                      <Home />
+                    </span>
+                    Feedback
+                  </Link>
+                </Button>
+              </li>
             </ul>
           </div>
         </div>
