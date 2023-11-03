@@ -31,7 +31,7 @@ const Sidebar = ({ show }) => {
               ))}
             </ul>
 
-            <ul>
+            <ul className="side__menu__last">
               <li>
                 <Button>
                   <Link href="">
