@@ -25,7 +25,7 @@ const Menubar = ({ show, setShow }) => {
     <>
       <nav className="menubar">
         <Container>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className="d_flex">
             {/* left */}
             <Grid item lg={6} xs={6}>
               <div className="menubar__left">
@@ -70,6 +70,17 @@ const Menubar = ({ show, setShow }) => {
                     }}
                     className="profile__dropdown"
                   >
+                    <div>
+                      <div className="profile__flex" onClick={handleClose}>
+                        <div className="img">
+                          <img src="/images/user.jpg" alt="" />
+                        </div>
+                        <div className="text">
+                          <h4>Jafrul Hasan Rasel</h4>
+                          <p>abc@gmail.com</p>
+                        </div>
+                      </div>
+                    </div>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
                     <MenuItem onClick={handleClose}>My account</MenuItem>
                     <MenuItem onClick={handleClose}>Logout</MenuItem>

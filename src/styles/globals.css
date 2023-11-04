@@ -1,4 +1,4 @@
-font-family: "Montserrat", sans-serif;
+/* font-family: "Montserrat", sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -40,10 +40,18 @@ body :where(ul, ol, li) {
   list-style-type: none;
 }
 
+.gap__layout {
+  display: flex;
+  gap: 30px;
+}
+
 .main__section {
-  margin-top: 100px;
+  /* margin-top: 100px;
   margin-left: 230px;
-  margin-right: 20px;
+  margin-right: 20px; */
+  width: 90%;
+  margin-right: 30px;
+  margin-top: 90px;
 }
 
 .d_flex {
@@ -127,8 +135,8 @@ p {
   font-size: 14px;
   line-height: 20px;
   z-index: 99;
-  background: #fff;
-  padding: 0px 5px;
+  /* background: #fff; */
+  /* padding: 0px 5px; */
 }
 
 /* -----------------------------------------------------------
@@ -137,7 +145,7 @@ Start menubar
 
 .menubar {
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.12);
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 99;
   position: fixed;
   top: 0;
@@ -209,14 +217,40 @@ Start menubar
 .profile__dropdown ul {
   margin: 0;
   padding: 0;
+  width: 250px;
 }
 
 .profile__dropdown li {
   border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .profile__dropdown li:last-child {
   border-bottom: 0;
+}
+
+.profile__dropdown .MuiPaper-root{
+  border-radius: 10px;
+}
+
+.profile__dropdown .profile__flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile__dropdown .profile__flex img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.profile__dropdown .profile__flex p{
+  margin-top: 0;
 }
 
 /* -----------------------------------------------------------
@@ -228,15 +262,16 @@ Start sidebar
 -----------------------------------------------------------*/
 .sidebar {
   background: #fff;
-  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
-  width: 200px;
-  height: calc(100vh - 80px);
-  position: fixed;
-  top: 80px;
+  box-shadow: rgba(0, 0, 0, 0.12);
+  width: 220px;
+  height: calc(100vh - 65px);
+  position: relative;
+  top: 65px;
   left: 0;
   z-index: 9;
   transition: all linear 0.2s;
   overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .sidebar button {
@@ -369,11 +404,11 @@ Start login
   margin-top: 25px;
 }
 
-.login .login__form .password {
+.login .login__form .login__pass {
   position: relative;
 }
 
-.login .login__form .password span {
+.login .login__form .login__pass .eye {
   position: absolute;
   top: 12px;
   right: 15px;

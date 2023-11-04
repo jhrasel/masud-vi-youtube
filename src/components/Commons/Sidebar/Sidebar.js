@@ -35,10 +35,8 @@ const Sidebar = ({ show }) => {
               <li>
                 <Button>
                   <Link href="">
-                    <span>
-                      <Home />
-                    </span>
-                    Settings
+                    <Home />
+                    <span>Settings</span>
                   </Link>
                 </Button>
               </li>
@@ -46,10 +44,8 @@ const Sidebar = ({ show }) => {
               <li>
                 <Button>
                   <Link href="">
-                    <span>
-                      <Home />
-                    </span>
-                    Feedback
+                    <Home />
+                    <span>Feedback</span>
                   </Link>
                 </Button>
               </li>
@@ -72,17 +68,24 @@ const Sidebar = ({ show }) => {
               ))}
             </ul>
 
-            <ul className="short__menu">
-              {Data?.map((data, i) => (
-                <li key={i}>
-                  <Link
-                    href={data.url}
-                    className={router.pathname == data.url ? "active" : ""}
-                  >
-                    {data.icon} <span>{data.name}</span>
+            <ul className="short__menu side__menu__last">
+              <li>
+                <Button>
+                  <Link href="">
+                    <Home />
+                    <span>Settings</span>
                   </Link>
-                </li>
-              ))}
+                </Button>
+              </li>
+
+              <li>
+                <Button>
+                  <Link href="">
+                    <Home />
+                    <span>Feedback</span>
+                  </Link>
+                </Button>
+              </li>
             </ul>
           </div>
         </div>

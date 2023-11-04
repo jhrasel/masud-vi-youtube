@@ -6,9 +6,11 @@ const Layout = ({ children }) => {
   const [show, setShow] = useState(true);
   return (
     <>
-      <Menubar show={show} setShow={setShow}/>
-      <Sidebar show={show}/>
-      <main className="main__section">{children}</main>
+      <Menubar show={show} setShow={setShow} />
+      <div className="gap__layout">
+        <Sidebar show={show} />
+        <main className="main__section">{children}</main>
+      </div>
     </>
   );
 };

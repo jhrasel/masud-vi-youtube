@@ -31,17 +31,17 @@ const index = () => {
             <DBInput label="Email Address" />
 
             {/* password */}
-            <div className="password">
+            <div className="login__pass">
               <DBInput label="Password" type={showPass ? "text" : "password"} />
 
               {showPass ? (
-                <span onClick={handleShow}>
+                <div className="eye" onClick={handleShow}>
                   <VisibilityOffIcon />
-                </span>
+                </div>
               ) : (
-                <span onClick={handleShow}>
+                <div className="eye" onClick={handleShow}>
                   <VisibilityIcon />
-                </span>
+                </div>
               )}
             </div>
 
