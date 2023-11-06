@@ -27,6 +27,32 @@ body :where(h1, h2, h3, h4, h5, h6, p) {
   padding: 0;
 }
 
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* scroll bar end */
+
 th,
 td {
   font-family: "Montserrat", sans-serif !important;
@@ -392,7 +418,7 @@ Start sidebar
 }
 
 .side__menu__first {
-  height: 85%;
+  height: calc(100% - 15%);
   overflow-x: hidden;
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
