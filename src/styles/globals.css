@@ -58,6 +58,10 @@ body :where(ul, ol, li) {
   width: 350px;
 }
 
+.MuiBox-root {
+  width: 100%;
+}
+
 .main__section {
   /* margin-top: 100px;
   margin-left: 230px;
@@ -607,7 +611,7 @@ Start common__table
 }
 
 .table__filter {
-  padding: 30px;
+  padding: 30px 20px;
 }
 
 .table__filter .header {
