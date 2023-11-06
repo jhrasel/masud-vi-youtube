@@ -45,6 +45,14 @@ body :where(ul, ol, li) {
   gap: 30px;
 }
 
+.css-1u2w381-MuiModal-root-MuiDrawer-root{
+  position: unset;
+}
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: unset;
+}
+
 .main__section {
   /* margin-top: 100px;
   margin-left: 230px;
@@ -102,7 +110,7 @@ p {
   transition: all linear 0.2s;
 }
 
-.bg__btn:hover {
+.bg__btn.MuiButtonBase-root:hover {
   background: var(--hover-color);
 }
 
@@ -231,7 +239,7 @@ Start menubar
   border-bottom: 0;
 }
 
-.profile__dropdown .MuiPaper-root{
+.profile__dropdown .MuiPaper-root {
   border-radius: 10px;
 }
 
@@ -249,7 +257,7 @@ Start menubar
   border-radius: 50%;
 }
 
-.profile__dropdown .profile__flex p{
+.profile__dropdown .profile__flex p {
   margin-top: 0;
 }
 
@@ -597,8 +605,16 @@ Start common__table
   padding: 30px;
 }
 
-.table__filter h3 {
+.table__filter .header {
   margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table__filter .header .close{
+  cursor: pointer;
+  color: var(--red-color);
+  line-height: 0;
 }
 
 .table__form .custom__input {

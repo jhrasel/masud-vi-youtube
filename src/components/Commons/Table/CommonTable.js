@@ -21,14 +21,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import DBInput from "@/components/ReUse/DBInput";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
+import CancelIcon from "@mui/icons-material/Cancel";
 
-import SkipNextIcon from '@mui/icons-material/SkipNext';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import SkipNextIcon from "@mui/icons-material/SkipNext";
+import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 
 const CommonTable = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
   const [isDrawerOpen, setIsdrawerOpen] = useState(false);
+
+  const handleCloseDrawer = () => {
+    setIsdrawerOpen(false);
+  };
 
   return (
     <>
@@ -48,14 +53,15 @@ const CommonTable = () => {
                 Filter
               </Button>
 
-              <Drawer
-                anchor="right"
-                open={isDrawerOpen}
-                onClose={() => setIsdrawerOpen(false)}
-              >
+              <Drawer anchor="right" open={isDrawerOpen}>
                 <Box width="400px" role="presentation">
                   <div className="table__filter">
-                    <h3>Table Drawer</h3>
+                    <div className="header d_flex d_justify">
+                      <div className="close" onClick={handleCloseDrawer}>
+                        <CancelIcon />
+                      </div>
+                      <h3>Table Drawer</h3>
+                    </div>
 
                     <div className="table__form">
                       <DBInput label="Date" type="date" />
