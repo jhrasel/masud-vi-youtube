@@ -19,7 +19,7 @@
 
 body {
   background: #f9f9f9;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 body :where(h1, h2, h3, h4, h5, h6, p) {
