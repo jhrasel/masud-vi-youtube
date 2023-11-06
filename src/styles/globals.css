@@ -62,6 +62,10 @@ body :where(ul, ol, li) {
   width: 100%;
 }
 
+.MuiDrawer-root {
+  width: 0;
+}
+
 .main__section {
   /* margin-top: 100px;
   margin-left: 230px;
