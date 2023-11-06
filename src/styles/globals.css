@@ -287,17 +287,15 @@ End menubar
 Start sidebar
 -----------------------------------------------------------*/
 .sidebar {
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.12);
   width: 220px;
-  height: calc(100vh - 65px);
+  height: 100vh;
   position: relative;
   top: 65px;
   left: 0;
   z-index: 9;
   transition: all linear 0.2s;
   overflow: hidden;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .sidebar button {
@@ -311,12 +309,31 @@ Start sidebar
   width: 60px;
 }
 
-.side__menu {
+.short__sidebar .side__menu {
+  width: 60px;
+}
+
+/* .side__menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   box-sizing: border-box;
+} */
+
+.side__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 65px);
+  box-sizing: border-box;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 190px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12);
 }
 
 .side__menu ul {
@@ -375,7 +392,7 @@ Start sidebar
 }
 
 .side__menu__first {
-  height: 70%;
+  height: 85%;
   overflow-x: hidden;
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
@@ -383,7 +400,7 @@ Start sidebar
 }
 
 .side__menu__last {
-  height: 30%;
+  height: 12%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
