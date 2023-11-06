@@ -75,7 +75,7 @@ body :where(ul, ol, li) {
   /* margin-top: 100px;
   margin-left: 230px;
   margin-right: 20px; */
-  width: 90%;
+  width: 100%;
   margin-right: 30px;
   margin-top: 90px;
 }
