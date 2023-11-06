@@ -421,8 +421,9 @@ Start sidebar
   height: calc(100% - 15%);
   overflow-x: hidden;
   overflow-y: auto;
-  border-bottom: 1px solid #ddd;
   border-bottom: 0;
+  background: #fff;
+  z-index: 9;
 }
 
 .side__menu__last {
