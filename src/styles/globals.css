@@ -367,7 +367,7 @@ Start sidebar
 }
 
 .side__menu li {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .side__menu a {
