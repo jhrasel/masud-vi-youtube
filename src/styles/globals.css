@@ -45,16 +45,16 @@ body :where(ul, ol, li) {
   gap: 30px;
 }
 
-.css-1u2w381-MuiModal-root-MuiDrawer-root {
+.MuiDrawer-modal {
   position: unset;
 }
 
-.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+.MuiDrawer-modal .MuiBackdrop-root {
   background-color: unset;
   width: 0;
 }
 
-.css-1z13ce1 {
+.MuiDrawer-modal .MuiPaper-root {
   width: 350px;
 }
 
