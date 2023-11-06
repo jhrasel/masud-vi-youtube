@@ -22,4 +22,79 @@ export const Data = [
     name: "Settings",
     url: "/settings",
   },
+  {
+    icon: <Home />,
+    name: "Content",
+    url: "/content",
+  },
+  {
+    icon: <Home />,
+    name: "Comments",
+    url: "/comments",
+  },
+  {
+    icon: <Home />,
+    name: "Settings",
+    url: "/settings",
+  },
+  {
+    icon: <Home />,
+    name: "Content",
+    url: "/content",
+  },
+  {
+    icon: <Home />,
+    name: "Comments",
+    url: "/comments",
+  },
+  {
+    icon: <Home />,
+    name: "Settings",
+    url: "/settings",
+  },
+  {
+    icon: <Home />,
+    name: "Content",
+    url: "/content",
+  },
+  {
+    icon: <Home />,
+    name: "Comments",
+    url: "/comments",
+  },
+  {
+    icon: <Home />,
+    name: "Settings",
+    url: "/settings",
+  },
+  {
+    icon: <Home />,
+    name: "Content",
+    url: "/content",
+  },
+  {
+    icon: <Home />,
+    name: "Comments",
+    url: "/comments",
+  },
+  {
+    icon: <Home />,
+    name: "Settings",
+    url: "/settings",
+  },
+  {
+    icon: <Home />,
+    name: "Content",
+    url: "/content",
+  },
+  {
+    icon: <Home />,
+    name: "Comments",
+    url: "/comments",
+  },
+  {
+    icon: <Home />,
+    name: "Settings",
+    url: "/settings",
+  },
 ];
