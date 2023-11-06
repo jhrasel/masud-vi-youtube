@@ -45,12 +45,17 @@ body :where(ul, ol, li) {
   gap: 30px;
 }
 
-.css-1u2w381-MuiModal-root-MuiDrawer-root{
+.css-1u2w381-MuiModal-root-MuiDrawer-root {
   position: unset;
 }
 
 .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
   background-color: unset;
+  width: 0;
+}
+
+.css-1z13ce1 {
+  width: 350px;
 }
 
 .main__section {
@@ -611,7 +616,7 @@ Start common__table
   border-bottom: 1px solid var(--border-color);
 }
 
-.table__filter .header .close{
+.table__filter .header .close {
   cursor: pointer;
   color: var(--red-color);
   line-height: 0;

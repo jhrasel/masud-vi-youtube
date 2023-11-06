@@ -73,7 +73,12 @@ const Menubar = ({ show, setShow }) => {
                     <div>
                       <div className="profile__flex" onClick={handleClose}>
                         <div className="img">
-                          <img src="/images/user.jpg" alt="" />
+                          <DBImage
+                            src="/images/user.jpg"
+                            width="50"
+                            height="50"
+                            alt=""
+                          />
                         </div>
                         <div className="text">
                           <h4>Jafrul Hasan Rasel</h4>
