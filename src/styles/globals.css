@@ -59,7 +59,7 @@ body :where(ul, ol, li) {
 }
 
 .MuiBox-root {
-  width: 100%;
+  width: 100% !important;
 }
 
 .MuiDrawer-root {
