@@ -418,19 +418,21 @@ Start sidebar
 }
 
 .side__menu__first {
-  height: calc(100% - 15%);
+  height: calc(100% - 110px);
   overflow-x: hidden;
   overflow-y: auto;
   border-bottom: 0;
   background: #fff;
   z-index: 9;
+  padding-bottom: 10px;
 }
 
 .side__menu__last {
-  height: 13%;
+  height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 0;
 }
 
 /* -----------------------------------------------------------
