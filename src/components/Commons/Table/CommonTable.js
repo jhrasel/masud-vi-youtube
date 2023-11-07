@@ -21,10 +21,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import DBInput from "@/components/ReUse/DBInput";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
-import CancelIcon from "@mui/icons-material/Cancel";
+import CloseIcon from '@mui/icons-material/Close';
 
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import Image from "next/image";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const CommonTable = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -58,15 +61,43 @@ const CommonTable = () => {
                   <div className="table__filter">
                     <div className="header d_flex d_justify">
                       <div className="close" onClick={handleCloseDrawer}>
-                        <CancelIcon />
+                        <CloseIcon />
                       </div>
-                      <h3>Table Drawer</h3>
+                      <h3>Filter</h3>
                     </div>
 
                     <div className="table__form">
-                      <DBInput label="Date" type="date" />
-                      <DBInput label="Refarence" type="text" />
-                      <DBInput label="Refarence" type="text" />
+                      
+                      <div className="custom__input">
+                        <label>Code Product</label>
+                        <input type="text" placeholder="Search by product" />
+                      </div>
+
+                      <div className="custom__input">
+                        <label>Code Product</label>
+                        <input type="text" placeholder="Search by product" />
+                      </div>
+
+                      <div className="custom__input">
+                        <label>Category</label>
+                        <select name="">
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>
+                      </div>
+
+                      <div className="custom__input">
+                        <label>Brand</label>
+                        <select name="">
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>
+                      </div>
+
                     </div>
 
                     <div className="duel__button">
@@ -121,12 +152,16 @@ const CommonTable = () => {
                 <TableCell align="left">
                   <Checkbox {...label} />
                 </TableCell>
-                <TableCell align="left">Data</TableCell>
-                <TableCell align="center">Reference</TableCell>
-                <TableCell align="center">Customer</TableCell>
-                <TableCell align="center">Warehouse</TableCell>
-                <TableCell align="center">Status</TableCell>
-                <TableCell align="center"> Grand Total</TableCell>
+                <TableCell align="left">Image</TableCell>
+                <TableCell align="center">Type</TableCell>
+                <TableCell align="center">Name</TableCell>
+                <TableCell align="center">Code</TableCell>
+                <TableCell align="center">Brand</TableCell>
+                <TableCell align="center">Category</TableCell>
+                <TableCell align="center">Cost</TableCell>
+                <TableCell align="center">Price</TableCell>
+                <TableCell align="center">Unit</TableCell>
+                <TableCell align="center">Quantity</TableCell>
                 <TableCell align="right">Action</TableCell>
               </TableRow>
             </TableHead>
@@ -138,18 +173,27 @@ const CommonTable = () => {
                   <Checkbox {...label} />
                 </TableCell>
 
-                <TableCell align="left">2023-10-20</TableCell>
-
-                <TableCell align="center">
-                  <DBLink url="" name="QT__115" />
+                <TableCell align="left">
+                  <div className="table__img">
+                    <Image
+                      src="/images/Orange-1.jpg"
+                      height="40"
+                      width="40"
+                      alt="table-img"
+                    />
+                  </div>
                 </TableCell>
 
-                <TableCell align="center">Jafrul Hasan Rasel</TableCell>
-                <TableCell align="center">Warehouse 1</TableCell>
-                <TableCell align="center">
-                  <h6 className="send">Sent</h6>
-                </TableCell>
-                <TableCell align="center">320.00</TableCell>
+                <TableCell align="center">Single</TableCell>
+
+                <TableCell align="center">Orange</TableCell>
+                <TableCell align="center">80256894</TableCell>
+                <TableCell align="center">N/D</TableCell>
+                <TableCell align="center">Fruits</TableCell>
+                <TableCell align="center">19.00</TableCell>
+                <TableCell align="center">23.00</TableCell>
+                <TableCell align="center">pc</TableCell>
+                <TableCell align="center">94 pc</TableCell>
                 <TableCell align="right">
                   <div className="table__action">
                     <Link href="">
@@ -171,18 +215,27 @@ const CommonTable = () => {
                   <Checkbox {...label} />
                 </TableCell>
 
-                <TableCell align="left">2023-10-20</TableCell>
-
-                <TableCell align="center">
-                  <DBLink url="" name="QT__115" />
+                <TableCell align="left">
+                  <div className="table__img">
+                    <Image
+                      src="/images/Orange-1.jpg"
+                      height="40"
+                      width="40"
+                      alt="table-img"
+                    />
+                  </div>
                 </TableCell>
 
-                <TableCell align="center">Jafrul Hasan Rasel</TableCell>
-                <TableCell align="center">Warehouse 1</TableCell>
-                <TableCell align="center">
-                  <h6 className="send">Sent</h6>
-                </TableCell>
-                <TableCell align="center">320.00</TableCell>
+                <TableCell align="center">Single</TableCell>
+
+                <TableCell align="center">Orange</TableCell>
+                <TableCell align="center">80256894</TableCell>
+                <TableCell align="center">N/D</TableCell>
+                <TableCell align="center">Fruits</TableCell>
+                <TableCell align="center">19.00</TableCell>
+                <TableCell align="center">23.00</TableCell>
+                <TableCell align="center">pc</TableCell>
+                <TableCell align="center">94 pc</TableCell>
                 <TableCell align="right">
                   <div className="table__action">
                     <Link href="">
@@ -204,18 +257,27 @@ const CommonTable = () => {
                   <Checkbox {...label} />
                 </TableCell>
 
-                <TableCell align="left">2023-10-20</TableCell>
-
-                <TableCell align="center">
-                  <DBLink url="" name="QT__115" />
+                <TableCell align="left">
+                  <div className="table__img">
+                    <Image
+                      src="/images/Orange-1.jpg"
+                      height="40"
+                      width="40"
+                      alt="table-img"
+                    />
+                  </div>
                 </TableCell>
 
-                <TableCell align="center">Jafrul Hasan Rasel</TableCell>
-                <TableCell align="center">Warehouse 1</TableCell>
-                <TableCell align="center">
-                  <h6 className="panding">Panding</h6>
-                </TableCell>
-                <TableCell align="center">320.00</TableCell>
+                <TableCell align="center">Single</TableCell>
+
+                <TableCell align="center">Orange</TableCell>
+                <TableCell align="center">80256894</TableCell>
+                <TableCell align="center">N/D</TableCell>
+                <TableCell align="center">Fruits</TableCell>
+                <TableCell align="center">19.00</TableCell>
+                <TableCell align="center">23.00</TableCell>
+                <TableCell align="center">pc</TableCell>
+                <TableCell align="center">94 pc</TableCell>
                 <TableCell align="right">
                   <div className="table__action">
                     <Link href="">
@@ -237,18 +299,27 @@ const CommonTable = () => {
                   <Checkbox {...label} />
                 </TableCell>
 
-                <TableCell align="left">2023-10-20</TableCell>
-
-                <TableCell align="center">
-                  <DBLink url="" name="QT__115" />
+                <TableCell align="left">
+                  <div className="table__img">
+                    <Image
+                      src="/images/Orange-1.jpg"
+                      height="40"
+                      width="40"
+                      alt="table-img"
+                    />
+                  </div>
                 </TableCell>
 
-                <TableCell align="center">Jafrul Hasan Rasel</TableCell>
-                <TableCell align="center">Warehouse 1</TableCell>
-                <TableCell align="center">
-                  <h6 className="send">Sent</h6>
-                </TableCell>
-                <TableCell align="center">320.00</TableCell>
+                <TableCell align="center">Single</TableCell>
+
+                <TableCell align="center">Orange</TableCell>
+                <TableCell align="center">80256894</TableCell>
+                <TableCell align="center">N/D</TableCell>
+                <TableCell align="center">Fruits</TableCell>
+                <TableCell align="center">19.00</TableCell>
+                <TableCell align="center">23.00</TableCell>
+                <TableCell align="center">pc</TableCell>
+                <TableCell align="center">94 pc</TableCell>
                 <TableCell align="right">
                   <div className="table__action">
                     <Link href="">
@@ -281,10 +352,16 @@ const CommonTable = () => {
           <div className="pagination__item">
             <h6>1 - 10 of 10</h6>
             <button>
-              <SkipPreviousIcon /> Prev
+              <SkipPreviousIcon />
+            </button>
+            <button className="second">
+              <ArrowBackIosIcon />
+            </button>
+            <button className="third">
+              <ArrowForwardIosIcon />
             </button>
             <button>
-              Next <SkipNextIcon />
+              <SkipNextIcon />
             </button>
           </div>
         </div>
