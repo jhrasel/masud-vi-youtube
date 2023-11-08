@@ -1,4 +1,4 @@
-import DBInput from "@/components/ReUse/DBInput";
+
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,6 +9,7 @@ import { Button, Checkbox, FormControlLabel } from "@mui/material";
 import DBLink from "@/components/ReUse/DBLink";
 import Link from "next/link";
 import { useState } from "react";
+import { DBInput } from "@/components/ReUse/DBInput";
 
 const index = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
