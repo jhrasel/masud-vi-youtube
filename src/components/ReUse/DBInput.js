@@ -1,10 +1,9 @@
 import { TextField } from "@mui/material";
 import React from "react";
 
-const DBInput = ({ type, label, className }) => {
+export const DBInput = ({ label, className, type }) => {
   return (
     <div className="custom__input">
-      {/* <input type={type} name={name} value={value} placeholder={placeholder} /> */}
       <TextField
         id="outlined-basic"
         label={label}
@@ -16,4 +15,45 @@ const DBInput = ({ type, label, className }) => {
   );
 };
 
-export default DBInput;
+export const DBInputError = ({ label, className, type }) => {
+  return (
+    <div className="custom__input red">
+      <TextField
+        id="outlined-basic"
+        label={label}
+        variant="outlined"
+        className={className}
+        type={type}
+      />
+    </div>
+  );
+};
+
+export const DBInputFocus = ({ label, className, type }) => {
+  return (
+    <div className="custom__input focus">
+      <TextField
+        id="outlined-basic"
+        label={label}
+        variant="outlined"
+        className={className}
+        type={type}
+      />
+    </div>
+  );
+};
+
+
+export const DBInputValid = ({ label, className, type }) => {
+  return (
+    <div className="custom__input valid">
+      <TextField
+        id="outlined-basic"
+        label={label}
+        variant="outlined"
+        className={className}
+        type={type}
+      />
+    </div>
+  );
+};

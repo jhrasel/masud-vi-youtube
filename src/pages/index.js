@@ -1,8 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import DBInput from "@/components/ReUse/DBInput";
 import CommonTable from "@/components/Commons/Table/CommonTable";
+import CommonModal from "@/components/Commons/Modal/CommonModal";
+import {
+  DBInput,
+  DBInputError,
+  DBInputFocus,
+  DBInputValid,
+} from "@/components/ReUse/DBInput";
 
 export default function Home() {
   return (
@@ -15,7 +19,13 @@ export default function Home() {
       </Head>
 
       <h2>Start Here</h2>
-      <DBInput label="Input Field" className="red" />
+
+      <DBInput label="Input Field" className="" />
+      <DBInputError label="Input Field" className="" />
+      <DBInputFocus label="Input Field" className="" />
+      <DBInputValid label="Input Field" className="" />
+
+      <CommonModal />
 
       <CommonTable />
     </>

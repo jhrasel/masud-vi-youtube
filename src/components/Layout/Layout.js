@@ -9,7 +9,15 @@ const Layout = ({ children }) => {
       <Menubar show={show} setShow={setShow} />
       <div className="gap__layout">
         <Sidebar show={show} />
-        <main className="main__section">{children}</main>
+        {show ? (
+          <main className="main__section" show={show}>
+            {children}
+          </main>
+        ) : (
+          <main className="main__section main__section__long" show={show}>
+            {children}
+          </main>
+        )}
       </div>
     </>
   );
