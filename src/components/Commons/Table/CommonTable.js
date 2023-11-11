@@ -21,7 +21,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import DBInput from "@/components/ReUse/DBInput";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
@@ -67,7 +67,6 @@ const CommonTable = () => {
                     </div>
 
                     <div className="table__form">
-                      
                       <div className="custom__input">
                         <label>Code Product</label>
                         <input type="text" placeholder="Search by product" />
@@ -97,7 +96,6 @@ const CommonTable = () => {
                           <option value="">Option 4</option>
                         </select>
                       </div>
-
                     </div>
 
                     <div className="duel__button">
@@ -145,35 +143,34 @@ const CommonTable = () => {
           </div>
         </div>
 
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="left">
+        <div className="table__content">
+          <table>
+            <thead>
+              <tr>
+                <th align="left">
                   <Checkbox {...label} />
-                </TableCell>
-                <TableCell align="left">Image</TableCell>
-                <TableCell align="center">Type</TableCell>
-                <TableCell align="center">Name</TableCell>
-                <TableCell align="center">Code</TableCell>
-                <TableCell align="center">Brand</TableCell>
-                <TableCell align="center">Category</TableCell>
-                <TableCell align="center">Cost</TableCell>
-                <TableCell align="center">Price</TableCell>
-                <TableCell align="center">Unit</TableCell>
-                <TableCell align="center">Quantity</TableCell>
-                <TableCell align="right">Action</TableCell>
-              </TableRow>
-            </TableHead>
+                </th>
+                <th align="center">Image</th>
+                <th align="center">Type</th>
+                <th align="center">Name</th>
+                <th align="center">Code</th>
+                <th align="center">Brand</th>
+                <th align="center">Category</th>
+                <th align="center">Cost</th>
+                <th align="center">Price</th>
+                <th align="center">Unit</th>
+                <th align="center">Quantity</th>
+                <th align="right">Action</th>
+              </tr>
+            </thead>
 
-            <TableBody>
-              {/* item */}
-              <TableRow>
-                <TableCell align="left">
+            <tbody>
+              <tr>
+                <td align="left">
                   <Checkbox {...label} />
-                </TableCell>
+                </td>
 
-                <TableCell align="left">
+                <td align="center">
                   <div className="table__img">
                     <Image
                       src="/images/Orange-1.jpg"
@@ -182,19 +179,19 @@ const CommonTable = () => {
                       alt="table-img"
                     />
                   </div>
-                </TableCell>
+                </td>
 
-                <TableCell align="center">Single</TableCell>
+                <td align="center">Single</td>
 
-                <TableCell align="center">Orange</TableCell>
-                <TableCell align="center">80256894</TableCell>
-                <TableCell align="center">N/D</TableCell>
-                <TableCell align="center">Fruits</TableCell>
-                <TableCell align="center">19.00</TableCell>
-                <TableCell align="center">23.00</TableCell>
-                <TableCell align="center">pc</TableCell>
-                <TableCell align="center">94 pc</TableCell>
-                <TableCell align="right">
+                <td align="center">Orange</td>
+                <td align="center">80256894</td>
+                <td align="center">N/D</td>
+                <td align="center">Fruits</td>
+                <td align="center">19.00</td>
+                <td align="center">23.00</td>
+                <td align="center">pc</td>
+                <td align="center">94 pc</td>
+                <td align="right">
                   <div className="table__action">
                     <Link href="">
                       <RemoveRedEyeIcon />
@@ -206,137 +203,11 @@ const CommonTable = () => {
                       <DeleteIcon />
                     </Link>
                   </div>
-                </TableCell>
-              </TableRow>
-
-              {/* item */}
-              <TableRow>
-                <TableCell align="left">
-                  <Checkbox {...label} />
-                </TableCell>
-
-                <TableCell align="left">
-                  <div className="table__img">
-                    <Image
-                      src="/images/Orange-1.jpg"
-                      height="40"
-                      width="40"
-                      alt="table-img"
-                    />
-                  </div>
-                </TableCell>
-
-                <TableCell align="center">Single</TableCell>
-
-                <TableCell align="center">Orange</TableCell>
-                <TableCell align="center">80256894</TableCell>
-                <TableCell align="center">N/D</TableCell>
-                <TableCell align="center">Fruits</TableCell>
-                <TableCell align="center">19.00</TableCell>
-                <TableCell align="center">23.00</TableCell>
-                <TableCell align="center">pc</TableCell>
-                <TableCell align="center">94 pc</TableCell>
-                <TableCell align="right">
-                  <div className="table__action">
-                    <Link href="">
-                      <RemoveRedEyeIcon />
-                    </Link>
-                    <Link href="">
-                      <BorderColorIcon />
-                    </Link>
-                    <Link href="">
-                      <DeleteIcon />
-                    </Link>
-                  </div>
-                </TableCell>
-              </TableRow>
-
-              {/* item */}
-              <TableRow>
-                <TableCell align="left">
-                  <Checkbox {...label} />
-                </TableCell>
-
-                <TableCell align="left">
-                  <div className="table__img">
-                    <Image
-                      src="/images/Orange-1.jpg"
-                      height="40"
-                      width="40"
-                      alt="table-img"
-                    />
-                  </div>
-                </TableCell>
-
-                <TableCell align="center">Single</TableCell>
-
-                <TableCell align="center">Orange</TableCell>
-                <TableCell align="center">80256894</TableCell>
-                <TableCell align="center">N/D</TableCell>
-                <TableCell align="center">Fruits</TableCell>
-                <TableCell align="center">19.00</TableCell>
-                <TableCell align="center">23.00</TableCell>
-                <TableCell align="center">pc</TableCell>
-                <TableCell align="center">94 pc</TableCell>
-                <TableCell align="right">
-                  <div className="table__action">
-                    <Link href="">
-                      <RemoveRedEyeIcon />
-                    </Link>
-                    <Link href="">
-                      <BorderColorIcon />
-                    </Link>
-                    <Link href="">
-                      <DeleteIcon />
-                    </Link>
-                  </div>
-                </TableCell>
-              </TableRow>
-
-              {/* item */}
-              <TableRow>
-                <TableCell align="left">
-                  <Checkbox {...label} />
-                </TableCell>
-
-                <TableCell align="left">
-                  <div className="table__img">
-                    <Image
-                      src="/images/Orange-1.jpg"
-                      height="40"
-                      width="40"
-                      alt="table-img"
-                    />
-                  </div>
-                </TableCell>
-
-                <TableCell align="center">Single</TableCell>
-
-                <TableCell align="center">Orange</TableCell>
-                <TableCell align="center">80256894</TableCell>
-                <TableCell align="center">N/D</TableCell>
-                <TableCell align="center">Fruits</TableCell>
-                <TableCell align="center">19.00</TableCell>
-                <TableCell align="center">23.00</TableCell>
-                <TableCell align="center">pc</TableCell>
-                <TableCell align="center">94 pc</TableCell>
-                <TableCell align="right">
-                  <div className="table__action">
-                    <Link href="">
-                      <RemoveRedEyeIcon />
-                    </Link>
-                    <Link href="">
-                      <BorderColorIcon />
-                    </Link>
-                    <Link href="">
-                      <DeleteIcon />
-                    </Link>
-                  </div>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <div className="pagination__part">
           <div className="rows__per__page">

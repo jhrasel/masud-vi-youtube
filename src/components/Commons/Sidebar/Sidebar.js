@@ -24,7 +24,7 @@ const Sidebar = ({ show }) => {
                       href={data.url}
                       className={router.pathname == data.url ? "active" : ""}
                     >
-                      <span>{data.icon}</span> {data.name}
+                     {data.icon} <span>{data.name}</span> 
                     </Link>
                   </Button>
                 </li>

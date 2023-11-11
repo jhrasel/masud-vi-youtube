@@ -31,7 +31,7 @@ body :where(h1, h2, h3, h4, h5, h6, p) {
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
-  height: 100px;
+  height: 5px;
 }
 
 /* Track */
@@ -335,7 +335,7 @@ Start sidebar
   position: relative;
   top: 65px;
   left: 0;
-  z-index: 9;
+  z-index: 100;
   transition: all linear 0.2s;
   overflow: hidden;
   box-sizing: border-box;
@@ -398,6 +398,11 @@ Start sidebar
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif !important;
+  text-transform: capitalize;
 }
 
 .side__menu a::before {
@@ -451,6 +456,7 @@ Start sidebar
   flex-direction: column;
   justify-content: flex-end;
   margin-top: 0;
+  padding-right: 5px;
 }
 
 /* -----------------------------------------------------------
@@ -583,9 +589,17 @@ Start common__table
   margin-top: 30px;
 }
 
-.common__table .MuiTableContainer-root {
-  background-color: #fff;
-  box-shadow: unset;
+.common__table .table__content{
+  overflow-x: auto;
+}
+
+.common__table .table__content table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.common__table .table__content :where(th, td){
+  border-bottom: 1px solid var(--border-color);
 }
 
 .common__table td,
@@ -921,6 +935,7 @@ Start Responsive
     width: calc(100% - 265px);
     margin-right: 45px;
   }
+
   .main__section.main__section__long {
     width: calc(100% - 145px);
   }
@@ -941,6 +956,7 @@ Start Responsive
     width: calc(100% - 247px);
     margin-right: 25px;
   }
+
   .main__section.main__section__long {
     width: calc(100% - 125px);
   }
@@ -967,8 +983,11 @@ Start Responsive
 }
 
 @media (max-width: 649px) {
+
   .gap__layout {
-    gap: 20px;
+    gap: 0px;
+    display: block;
+    padding-left: 90px;
   }
 
   .side__menu a {
@@ -977,21 +996,54 @@ Start Responsive
   }
 
   .sidebar {
-    width: 150px;
+    width: 70px;
+    position: fixed;
+    left: 0;
+    top: 50px;
   }
 
   .side__menu {
-    width: 150px;
+    width: 70px;
+  }
+
+  .side__menu__first span {
+    display: none;
+  }
+
+  .short__sidebar .side__menu {
+    width: 190px;
+  }
+
+
+  .short__sidebar a {
+    justify-content: start;
+    font-size: 16px;
+  }
+
+  .side__menu .short__menu a span {
+    display: block;
+  }
+
+  .sidebar ul.side__menu__last span {
+    display: none;
+  }
+
+  .sidebar.short__sidebar ul.side__menu__last span {
+    display: block;
+  }
+
+  .side__menu__last {
+    padding-right: 0;
   }
 
   .main__section.main__section__long {
-    width: calc(100% - 105px);
-    margin-right: 15px;
+    width: 90%;
+    margin-right: 0px;
   }
 
   .main__section {
-    width: calc(100% - 190px);
-    margin-right: 15px;
+    width: 90%;
+    margin-right: 0px;
   }
 
   .bg__btn.MuiButtonBase-root {
